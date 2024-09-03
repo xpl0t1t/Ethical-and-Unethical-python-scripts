@@ -1,0 +1,9 @@
+import pyshark
+
+capture = pyshark.LiveCapture(interface='wlan0')
+
+capture.sniff()
+
+for packet in capture:
+
+    print(packet)

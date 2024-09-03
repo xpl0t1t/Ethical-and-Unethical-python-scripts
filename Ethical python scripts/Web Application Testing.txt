@@ -1,0 +1,15 @@
+import requests
+
+url = "http://vulnerable-site.com/login"
+
+data = {
+
+    "username": "add username here",
+
+    "password": "add password here"
+
+}
+
+response = requests.post(url, data=data)
+
+print(response.text)

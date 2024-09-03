@@ -1,0 +1,17 @@
+import socket
+
+target = "ip goes here"
+
+port = 80
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+result = sock.connect_ex((target, port))
+
+if result == 0:
+
+    print("Port {} is open".format(port))
+
+else:
+
+    print("Port {} is closed".format(port))

